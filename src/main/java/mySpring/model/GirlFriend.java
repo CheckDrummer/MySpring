@@ -1,6 +1,6 @@
-package mySpring;
+package mySpring.model;
 
-public class GirlFriend implements Friend{
+public class GirlFriend implements Friend {
 
     @Override
     public void speak() {

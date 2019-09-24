@@ -1,13 +1,16 @@
-package mySpring;
+package mySpring.config;
+
+import mySpring.model.Friend;
+import mySpring.model.GirlFriend;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class MyMyConfigImpl implements MyConfig {
+public class MyConfigImpl implements MyConfig {
     private Map<Class, Class> interfaceToImplMapping = new HashMap<>();
 
-    public MyMyConfigImpl() {
-        interfaceToImplMapping.put(Friend.class, GirlFriend.class);
+    public MyConfigImpl() {
+        interfaceToImplMapping.put(Friend.class, GirlFriend.class); //ToDo Only for Demo
     }
 
     public void bind(Class someInterface, Class someImplementation) {

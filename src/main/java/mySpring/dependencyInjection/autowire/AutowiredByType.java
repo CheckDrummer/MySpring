@@ -1,4 +1,4 @@
-package mySpring;
+package mySpring.dependencyInjection.autowire;
 
 import java.lang.annotation.Retention;
 

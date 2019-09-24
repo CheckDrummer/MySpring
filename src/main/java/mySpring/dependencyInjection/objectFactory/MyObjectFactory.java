@@ -1,6 +1,8 @@
-package mySpring;
+package mySpring.dependencyInjection.objectFactory;
 
 import lombok.SneakyThrows;
+import mySpring.config.MyConfigImpl;
+import mySpring.dependencyInjection.autowire.ObjectConfigure;
 import org.reflections.Reflections;
 
 import javax.annotation.PostConstruct;
@@ -12,7 +14,7 @@ import java.util.Set;
 
 public class MyObjectFactory {
     private Reflections scanner = new Reflections("mySpring");
-    private MyMyConfigImpl myConfigImpl = new MyMyConfigImpl();
+    private MyConfigImpl myConfigImpl = new MyConfigImpl();
     private List<ObjectConfigure> objectConfigures = new ArrayList<>();
 
     private static MyObjectFactory myInstance = new MyObjectFactory();
@@ -60,5 +62,4 @@ public class MyObjectFactory {
             }
         }
     }
-
 }

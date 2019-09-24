@@ -1,11 +1,13 @@
-package mySpring;
+package mySpring.model;
+
+import mySpring.dependencyInjection.autowire.AutowiredByType;
 
 import javax.annotation.PostConstruct;
 
 public class JonSnow {
 
     @AutowiredByType
-    private GirlFriend girlFriend;
+    private Friend girlFriend;
 
     @PostConstruct
     public void init() {
@@ -14,7 +16,7 @@ public class JonSnow {
     }
 
     public void speak() {
-        System.out.println("Winter is here");
+        System.out.println("You are McQueen");
     }
 
 }
